@@ -1,1 +1,258 @@
-/* You can add global styles to this file, and also import other style files */
+@use './app/util.scss' as u;
+
+/*
+    Contents:
+        || Fonts
+        || Palette
+        || :root variables
+        || Reset(ish)
+        || Layout
+        || CompanyName
+        || Buttons      (for use on buttons and possibly anchors)
+        || SR
+*/
+
+@font-face {
+    font-family: "Play";
+    src: url("./assets/fonts/Play/Play-Regular.ttf");
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: "Play";
+    src: url("./assets/fonts/Play/Play-Bold.ttf");
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+} 
+
+// || Palette
+$c_accent-50: '#FF7D79';
+$c_accent-100: '#FF6A64';
+$c_accent-200: '#FF423C';
+$c_accent-300: '#FF1B13';
+$c_accent-400: '#E90800';
+$c_accent-500: '#C00700';
+$c_accent-600: '#970500';
+$c_accent-700: '#6F0400';
+$c_accent-800: '#460200';
+$c_accent-900: '#1D0100';
+$c_accent-950: '#010000';
+
+$c_tone-50: '#E4E4E4';
+$c_tone-100: '#DADADA';
+$c_tone-200: '#C5C5C5';
+$c_tone-300: '#B1B1B1';
+$c_tone-400: '#9C9C9C';
+$c_tone-500: '#888888';
+$c_tone-600: '#6C6C6C';
+$c_tone-700: '#505050';
+$c_tone-800: '#343434';
+$c_tone-900: '#181818';
+$c_tone-950: '#0A0A0A';
+
+
+// || :root variables
+:root {
+    --accent-translucent: rgba(29, 1, 0, 0.9);
+    --accent:  #{ $c_accent-900 };
+    --accent-hover:  #{ $c_accent-700 };
+    --accent-focus:  #{ $c_accent-600 };
+    --accent-active:  #{ $c_accent-500 };
+
+    --c_main-text:  #{ $c_tone-950 };
+    --c_main-text-on-dark: white;
+
+    --c_nav-text: #{ $c_tone-600 };
+    --c_nav-text-hover:  #{ $c_accent-800 };
+    --c_nav-border-hover: #{ $c_accent-600 };
+
+    --c_text-link: #{ $c_accent-500 };
+    --c_text-link-hover: #{ $c_accent-400 };
+    --c_text-link-visited: #{ $c_accent-700 };
+    --c_text-link-visited-hover: #{ $c_accent-600 };
+
+    --c_section-bg-secondary: #{ $c_tone-900 };
+
+    --width-content: #{ u.px-to-rem(1500) };
+    
+    --padding-main-x: 1rem;
+    @media screen and (min-width: 800px){
+        --padding-main-x: 3rem;
+    }
+}
+
+
+
+// || Reset(ish)
+*{
+    box-sizing: border-box;
+}
+
+
+// || Layout
+body{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: var(--c_main-text);
+    margin: 0;
+}
+
+.strip{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.contentSection{
+    width: var(--width-content);
+    max-width: 100%;
+}
+
+
+// || CompanyName
+.companyName{
+    font-family: Play, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+// || Buttons
+// These formats are to be shared by both actual buttons and links that are supposed to look like buttons
+$breakpoint_buttonsGrow: 1400px;
+
+.smallBtn{
+    cursor: pointer;
+    display: block;
+    padding: u.px-to-rem(8) u.px-to-rem(12);
+    border-radius: u.px-to-rem(5);
+    font-size: u.px-to-rem(12);
+
+    max-width: 100%;
+
+    @media screen and (min-width: $breakpoint_buttonsGrow){
+        padding: u.px-to-rem(8) u.px-to-rem(12);
+        font-size: u.px-to-rem(14);
+        border-radius: u.px-to-rem(6);
+    }
+}
+
+.largeBtn{
+    cursor: pointer;
+    display: block;
+    padding: u.px-to-rem(10) u.px-to-rem(18);
+    border-radius: u.px-to-rem(6);
+    font-size: u.px-to-rem(16);
+    font-weight: bold;
+
+    max-width: 100%;
+
+    @media screen and (min-width: $breakpoint_buttonsGrow){
+        padding: u.px-to-rem(12) u.px-to-rem(20);
+        font-size: u.px-to-rem(20);
+    }
+}
+
+.primaryBtn{
+    border: none;
+
+    &-onLight{
+        background: var(--accent);
+        color: white;
+
+        &:hover{
+            background: var(--accent-hover);
+        }
+    }
+
+    &-onDark{
+        background: white;
+        color: var(--accent);
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+.secondaryBtn{
+
+    border-style: solid;
+
+    &.smallBtn{
+        border-width: u.px-to-rem(2);
+    }
+
+    &.largeBtn{
+        border-width: u.px-to-rem(3);
+    }
+    
+    &-onLight{
+        color: var(--accent);
+        border-color: var(--accent);
+
+        &:hover{
+            color: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+    }
+
+    &-onDark{
+        color: white;
+        border-color: white;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+
+// || SR
+@mixin sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.sr-only{
+    @include sr-only();
+}
+
+@mixin not-sr-only{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}

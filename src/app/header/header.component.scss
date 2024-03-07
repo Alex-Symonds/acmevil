@@ -1,0 +1,40 @@
+@use "../util" as u;
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: u.px-to-rem(12) u.px-to-rem(12) u.px-to-rem(12);
+
+    background: white;
+    box-shadow: 0 3px 15px 4px rgba(black, 0.1);
+}
+
+
+h1 {
+    margin: 0;
+
+    font-size: u.px-to-rem(36);
+    line-height: 1;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: u.px-to-rem(8);
+
+    position: relative;
+    top: u.px-to-rem(-2);
+}
+
+img {
+    height: u.px-to-rem(42);
+    width: u.px-to-rem(42);
+}
+
+

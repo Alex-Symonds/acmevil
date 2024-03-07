@@ -1,0 +1,162 @@
+@use '../util' as u;
+
+
+.navAndCTAWrapper{
+    &-on{
+        .burgerIcon{
+            display: none;
+        }
+    }
+    &-off{
+        .navAndCTA{
+            display: none;
+        }
+    }
+}
+
+
+
+
+.navAndCTA{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100dvh;
+
+    z-index: 5;
+    background: white;
+
+    padding: u.px-to-rem(6) 0.75rem 2rem u.px-to-rem(36);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: stretch;
+
+    .closeButtonWrapper{
+        align-self: end;
+    }
+}
+
+
+.burgerIcon{
+    --iconHeight: 1.25rem;
+
+    background: none;
+    border: none;
+    margin: 0;
+
+    padding: u.px-to-rem(4);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: u.px-to-rem(2);
+
+    border-bottom: 2px solid transparent;
+
+    span{
+        font-size: u.px-to-rem(12);
+    }
+
+    svg{
+        height: var(--iconHeight);
+        width: 90%;
+
+        rect{
+            fill: var(--accent);
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+        border-color: var(--accent-hover);
+
+        svg rect{
+            fill: var(--accent-hover);
+        }
+    }
+}
+
+
+.ctaButtonWrapper{
+    margin-top: u.px-to-rem(60);
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: start;
+    gap: u.px-to-rem(32);
+
+    max-height: calc(100% - 5rem);
+    overflow-y: auto;
+}
+
+
+a{
+    border-bottom: 2px solid transparent;
+    color: var(--c_nav-text);
+    padding: 0 u.px-to-rem(2);
+
+    &:hover{
+        border-color: var(--c_nav-border-hover);
+        color: var(--c_nav-text-hover);
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (min-width: 900px){
+    .navAndCTAWrapper{
+        &-on, 
+        &-off{
+
+            .burgerIcon{
+                display: none;
+            }
+
+            .closeButtonWrapper{
+                display: none;
+            }
+
+            .navAndCTA{
+                display: flex;
+            }
+            
+        }
+    }
+    
+    .navAndCTA{
+        position: static;
+        height: auto;
+    
+        z-index: 1;
+        background: none;
+    
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: u.px-to-rem(48);
+    }
+
+    nav{
+        display: flex;
+        gap: u.px-to-rem(32);
+
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    
+        max-height: none;
+    }
+
+    .ctaButtonWrapper{
+        margin-top: 0;
+    }
+}

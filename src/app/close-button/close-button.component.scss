@@ -1,0 +1,37 @@
+@use '../util' as u;
+
+.closeButton{
+    background: none;
+    border: none;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: u.px-to-rem(3);
+
+    font-size: u.px-to-rem(12);
+    color: var(--accent);
+
+    border-bottom: 2px solid transparent;
+
+    svg {
+        width: u.px-to-rem(30);
+        height: u.px-to-rem(30);
+
+        path{
+            fill: var(--accent);
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+        border-color: var(--accent-hover);
+        color: var(--accent-hover);
+
+        svg path{
+            fill: var(--accent-hover);
+        }
+    }
+}
