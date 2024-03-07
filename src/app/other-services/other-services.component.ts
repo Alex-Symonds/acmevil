@@ -24,7 +24,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './other-services.component.scss'
 })
 export class OtherServicesComponent {
-  pathToImages = "../assets/images/";
+  pathToImages = "./assets/images/";
 
   otherServicesData = [
     {

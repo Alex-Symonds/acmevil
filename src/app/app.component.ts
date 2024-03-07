@@ -6,6 +6,7 @@ import { CategoriesStripComponent } from './categories-strip/categories-strip.co
 import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
 import { XIsPowerStripComponent } from './x-is-power-strip/x-is-power-strip.component';
 import { OtherServicesComponent } from './other-services/other-services.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @Component({
@@ -17,7 +18,8 @@ import { OtherServicesComponent } from './other-services/other-services.componen
     CategoriesStripComponent,
     WhoAreWeComponent,
     XIsPowerStripComponent,
-    OtherServicesComponent
+    OtherServicesComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

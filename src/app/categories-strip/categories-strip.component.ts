@@ -21,7 +21,7 @@ import { MainCategoryCardComponent } from '../main-category-card/main-category-c
 })
 export class CategoriesStripComponent {
 
-  pathToImages = "../assets/images/";
+  pathToImages = "./assets/images/";
 
   categoriesData = [
     {
