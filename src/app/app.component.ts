@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 import { CategoriesStripComponent } from './categories-strip/categories-strip.component';
 import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
+import { XIsPowerStripComponent } from './x-is-power-strip/x-is-power-strip.component';
 
 
 @Component({
@@ -13,7 +14,8 @@ import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
     HeaderComponent,
     HeroComponent,
     CategoriesStripComponent,
-    WhoAreWeComponent
+    WhoAreWeComponent,
+    XIsPowerStripComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -1,0 +1,141 @@
+@use '../util' as u;
+
+.diagonalStrip{
+    --c_diag-start: white;
+    --c_diag-end: var(--accent);
+
+    display: block;
+
+    width: 100%;
+    max-width: 99dvw;
+
+    border-top: 12px solid var(--c_diag-start);
+    border-bottom: 12px solid var(--c_diag-end);
+}
+
+h3{
+    font-size: u.px-to-rem(42);
+    margin: 0 0 2rem;
+}
+
+
+.diagonalContent{
+    grid-column: 2;
+
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+
+    padding: 0;
+
+    .diagonalHalf{
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 3rem var(--padding-main-x);
+    }
+
+    .diagonalHalfA{
+        grid-column: 1; 
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        align-items: start;
+
+        background: var(--c_diag-start);
+    }
+
+    .diagonalHalfB{
+        grid-column: 2; 
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+        align-items: end;
+
+        color: var(--c_main-text-on-dark);
+        background: var(--c_diag-end);
+
+        p{
+            text-align: right;
+            text-align-last: right;
+        }
+
+        .primaryBtn{
+            color: var(--c_diag-end);
+        }
+
+    }
+
+}
+
+
+.linksContainer{
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 4rem;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.smallPrint{
+    margin-top: 1rem;
+    max-width: 50%;
+    font-size: u.px-to-rem(8);
+}
+
+
+@media screen and (min-width: 1150px){
+
+    .diagonalStrip{
+        background: linear-gradient(to right,
+            var(--c_diag-start) 50%,
+            var(--c_diag-end) calc(50% + 1px)
+        );
+    }
+
+    .diagonalContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 12rem auto;
+        gap: 5rem;
+
+        background: linear-gradient(135deg,
+            var(--c_diag-start) 50%,
+            var(--c_diag-end) calc(50% + 1px)
+        );
+
+        width: var(--width-content);
+        padding: 3rem var(--padding-main-x);
+
+        .diagonalHalf{
+            padding: 0;
+        }
+        .diagonalHalfA{
+            margin-top: 2rem;
+            background: none;
+        }
+        .diagonalHalfB{
+            background: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1517px){
+    .diagonalStrip{
+        display: grid;
+        grid-template-columns: 1fr var(--width-content) 1fr;
+        grid-template-rows: auto;
+    }
+}
+
