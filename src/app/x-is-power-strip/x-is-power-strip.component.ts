@@ -67,8 +67,9 @@ export class XIsPowerStripComponent {
       side: "left",
       title: "Knowledge is power",
       paragraphs: [
-        "Acmevil's library contains tens of thousands of tomes covering every subject a supervillain could need. Our opposition to all forms of censorship (besides those enforced by our successful customers, of course!) is expressed via our world-leading collection of banned books. We value the privacy of our clients and do not report reading habits to local or world law enforcement or government organisations.",
-        "For magically-inclined supervillains, we also maintain an extensive collection of spellbooks* and enchanted books* which are weapons themselves!"
+        "Acmevil's unique library contains tens of thousands of tomes covering every subject a supervillain could need. Our opposition to all forms of censorship (besides those enforced by our successful customers, of course!) is expressed via our world-leading collection of banned books. All accessible to you and your trusted minions for one low monthly subscription fee.",
+        "For magically-inclined supervillains, we also maintain an extensive collection of spellbooks* and enchanted books*. We have materials suitable for every level of skill, from the highest dark mage to those just beginning their self-taught journey.",
+        "Privacy is of the utmost importance to Acmevil: we do not report our clients' reading habits to law enforcement or government organisations.",
       ],
       links: {
         left: {
@@ -77,14 +78,14 @@ export class XIsPowerStripComponent {
           css: "primaryBtn primaryBtn-onLight largeBtn"
         }
       },
-      smallPrint: "* Magical and enchanted books not available on standard subscription. Some magical and enchanted books require passing a training course and/or procurement of insurance."
+      smallPrint: "* Magical and enchanted books not available on standard subscription. Some magical and enchanted books require proof of qualifications and/or procurement of insurance."
     },
     right: {
       side: "right",
       title: "Money is power",
       paragraphs: [
-        "For the budget-conscious supervillain, our experts have brought their experience to bear to create \"Basics\", a flexible range of off-the-shelf versions of all our most popular products. Cosmetic customisations are available on some lines, for a small additional fee.",
-        "From time to time, we offer sales on ex-demonstration items. Sign up for our newsletter to be notified of upcoming sales.",
+        "For the budget-conscious supervillain, our experts have brought their experience to bear to create \"Basics\", a flexible range of off-the-shelf versions of all our most popular products. Cosmetic customisations are available on some lines, for a small additional fee, so you need not sacrifice your branding to save your wallet.",
+        "From time to time, we run sales offering ex-demonstration items at heavily discounted prices. Sign up for our newsletter to receive updates on sales and other Acmevil news.",
         "We can also offer competitive* payment plans and rental** agreements for some items."
       ],
       links: {
