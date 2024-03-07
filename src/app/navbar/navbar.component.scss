@@ -68,13 +68,15 @@
             fill: var(--accent);
         }
     }
-    a{
+
+    .burgerLabel{
         color: var(--c_main-text);
 
         &:hover{
             color: var(--accent-hover);
         }
     }
+    
     &:hover{
         cursor: pointer;
         border-color: var(--accent-hover);
