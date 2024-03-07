@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
 import { CategoriesStripComponent } from './categories-strip/categories-strip.component';
+import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { CategoriesStripComponent } from './categories-strip/categories-strip.co
   imports: [
     HeaderComponent,
     HeroComponent,
-    CategoriesStripComponent
+    CategoriesStripComponent,
+    WhoAreWeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
