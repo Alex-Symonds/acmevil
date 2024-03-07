@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { CloseButtonComponent } from '../close-button/close-button.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [ButtonComponent, CloseButtonComponent ],
+  imports: [ButtonComponent, CloseButtonComponent, CommonModule ],
   template: `
   <div class="{{ wrapperCSS() }}">
     <button
@@ -23,11 +24,12 @@ import { CloseButtonComponent } from '../close-button/close-button.component';
         ></app-close-button>
       </div>
       <nav>
-        <a>Shop</a>
-        <a>Bespoke</a>
-        <a>Case Studies</a>
-        <a>Services</a>
-        <a>Henchpeople</a>
+        <a
+          *ngFor = "let navEle of navBarData"
+          href="{{ navEle.url }}"
+        >
+          {{ navEle.display }}
+        </a>
       </nav>
       <div class="ctaButtonWrapper">
         <app-button
@@ -52,6 +54,30 @@ export class NavbarComponent {
   }
 
   isOpen = false;
+
+  navBarData = [
+    {
+      display: "Bespoke",
+      url: "#"
+    },
+    {
+      display: "Case Studies",
+      url: "#"
+    },
+    {
+      display: "Shop",
+      url: "#"
+    },
+    {
+      display: "Services",
+      url: "#"
+    },
+    {
+      display: "Henchpeople",
+      url: "#"
+    },
+  ]
+
 
   testFn(event : Event){
     alert("Sorry, but this page is just a demo. You'll need to go elsewhere for your villaining needs.");

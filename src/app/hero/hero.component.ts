@@ -55,7 +55,7 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  blahBlah = "Acmevil is the world's #1 supplier of technological, biological, magical and software solutions for villains of all shapes, sizes, species and degrees of megalomania. Whether your goal is annihiliation, domination, material wealth or something more esoteric, Acmevil can support schemes of any scope with our range of standard and bespoke solutions.";
+  blahBlah = "Acmevil is the world's #1 supplier of technological, biological, magical and software solutions for villains of all shapes, sizes, species and degrees of megalomania. Whether your goal is annihiliation, domination, material wealth or something more esoteric, Acmevil can support schemes of any scope with our range of products and services.";
 
   buttonProps = {
     size: "large",

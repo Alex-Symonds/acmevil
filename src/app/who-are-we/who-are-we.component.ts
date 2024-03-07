@@ -44,8 +44,8 @@ export class WhoAreWeComponent {
   title = "Who are we?";
 
   paragraphs = [
-    "Established in 1897, Acmevil began as a family-owned mining business. After expanding into production of enriched uranium in the '40s, a chain of robberies from would-be supervillains almost put the company out of business.",
-    "Recognising this as a symptom of unmet demand and observing the low quality projects that plagued the industry, we reoriented ourselves to work with the supervillainous community, instead of against them. Since then Acmevil has gone from strength to strength, supporting generations of supervillains in their attempts to spread discord and destruction.",
+    "Established in 1897, Acmevil began as a family-owned mining business. After expanding into production of enriched uranium in the '40s, a chain of robberies from would-be supervillains almost forced the company into bankruptcy.",
+    "Recognising this as a symptom of unmet demand and observing the low quality projects that plagued the industry, we reoriented ourselves to work with the supervillainous community instead of against them. Since then Acmevil has gone from strength to strength, supporting generations of supervillains in their attempts to spread discord and destruction.",
     "All our products are 100% unethically sourced."
   ]
 
