@@ -9,7 +9,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   template: `
   <section class="header">
     <h1>
-      <img src="../assets/images/logo.svg" alt="" />
+      <img src="./assets/images/logo.svg" alt="" />
       <span class="companyName">acmevil</span>
     </h1>
   <app-navbar></app-navbar>

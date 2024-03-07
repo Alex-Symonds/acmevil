@@ -14,11 +14,11 @@ import { ButtonComponent } from '../button/button.component';
           <h2>
             <div class="subtitleWrapper">
               <img class="subtitle"
-                src="../assets/images/subtitle-with-decorations-white-pt1.svg"
+                src="./assets/images/subtitle-with-decorations-white-pt1.svg"
                 alt=""
               />
               <img class="subtitle"
-                src="../assets/images/subtitle-with-decorations-white-pt2.svg"
+                src="./assets/images/subtitle-with-decorations-white-pt2.svg"
                 alt=""
               />
             </div>
@@ -42,11 +42,11 @@ import { ButtonComponent } from '../button/button.component';
         </div>
       </div>
       <picture class="decoration">
-        <source srcset="../assets/images/hero.webp" media="(min-width: 943px)" />
-        <source srcset="../assets/images/hero-closeup-wide.webp" media="(min-width: 630px)" />
-        <source srcset="../assets/images/hero.webp" media="(min-width: 450px)" />
+        <source srcset="./assets/images/hero.webp" media="(min-width: 943px)" />
+        <source srcset="./assets/images/hero-closeup-wide.webp" media="(min-width: 630px)" />
+        <source srcset="./assets/images/hero.webp" media="(min-width: 450px)" />
         <img 
-          src="../assets/images/hero-closeup.webp"
+          src="./assets/images/hero-closeup.webp"
           alt=""
         />
       </picture>

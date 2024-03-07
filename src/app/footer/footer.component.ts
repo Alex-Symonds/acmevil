@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     <div class="strip footerStrip">
       <section class="contentSection footerContent">
         <div class="logoNameSubtitleContainer">
-          <img src="../assets/images/logo-white.svg" width="55px" alt="" />
+          <img src="./assets/images/logo-white.svg" width="55px" alt="" />
           <span class="companyName">acmevil</span>
           <span class="subtitle">good quality for evil intent</span>
         </div>
@@ -52,7 +52,7 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  imagesURL = "../assets/images/";
+  imagesURL = "./assets/images/";
   socials = [
     {
       url: '#',

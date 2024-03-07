@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <div class="strip whoAreWeStrip">
       <section class="contentSection whoAreWeContent">
-        <img class="logo" src="../assets/images/logo-white.svg" alt="" />
+        <img class="logo" src="./assets/images/logo-white.svg" alt="" />
         <h3>{{ title }}</h3>
         <p 
           *ngFor="let paragraph of paragraphs"
@@ -49,7 +49,7 @@ export class WhoAreWeComponent {
     "All our products are 100% unethically sourced."
   ]
 
-  pathToImages = "../assets/images/";
+  pathToImages = "./assets/images/";
   awards = [
     {
       pic: `${this.pathToImages}award_deathray.svg`,
