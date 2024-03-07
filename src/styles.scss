@@ -84,6 +84,7 @@ $c_tone-950: '#0A0A0A';
 
     --c_main-text:  #{ $c_tone-950 };
     --c_main-text-on-dark: white;
+    --c_subtle-text-on-dark: #{ $c_tone-200 };
 
     --c_nav-text: #{ $c_tone-600 };
     --c_nav-text-hover:  #{ $c_accent-800 };
