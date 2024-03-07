@@ -1,0 +1,55 @@
+@use '../util' as u;
+
+.otherCategoryCard{
+    position: relative;
+    width: 235px;
+    height: 256px;
+
+    &:hover{
+        transform: scale(1.05);
+        transition-duration: 100ms;
+        transition-delay: 40ms;
+        transition-timing-function: ease-in;
+        cursor: pointer;
+    }
+}
+
+.mainImg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+.overlay{
+    height: u.px-to-rem(50);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    
+    padding: u.px-to-rem(4) u.px-to-rem(12);
+    background: rgba(black, 0.9);
+    color: var(--c_main-text-on-dark);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4{
+        margin: 0;
+        font-size: u.px-to-rem(18);
+    }
+
+    .pointsContainer{
+        display: flex;
+        flex-direction: column;
+        font-size: u.px-to-rem(12);
+    }
+}
+

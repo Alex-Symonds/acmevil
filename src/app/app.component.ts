@@ -5,6 +5,7 @@ import { HeroComponent } from './hero/hero.component';
 import { CategoriesStripComponent } from './categories-strip/categories-strip.component';
 import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
 import { XIsPowerStripComponent } from './x-is-power-strip/x-is-power-strip.component';
+import { OtherServicesComponent } from './other-services/other-services.component';
 
 
 @Component({
@@ -15,7 +16,8 @@ import { XIsPowerStripComponent } from './x-is-power-strip/x-is-power-strip.comp
     HeroComponent,
     CategoriesStripComponent,
     WhoAreWeComponent,
-    XIsPowerStripComponent
+    XIsPowerStripComponent,
+    OtherServicesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

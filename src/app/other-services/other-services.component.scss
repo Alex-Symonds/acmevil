@@ -1,0 +1,32 @@
+@use '../util' as u;
+
+.otherServicesCardRowWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.otherServicesCardRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    width: 600px;
+    max-width: 100%;
+
+    padding: 0 var(--padding-main-x) var(--padding-main-x);
+}
+
+h3{
+    font-size: u.px-to-rem(42);
+    margin: 3rem 0 2rem;
+    padding: 0 var(--padding-main-x);
+}
+
+
+@media screen and (min-width: 1155px){
+    .otherServicesCardRow{
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+}
