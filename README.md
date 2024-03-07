@@ -1,27 +1,26 @@
-# AcmevilHome
+# Acmevil Home Page
+Small, quick project to design and make a homepage for a fictional company.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+## Project goals
+- Design and develop a company homepage, for portfolio purposes
+- Use some [AI art](https://creator.nightcafe.studio/) in a project
+- Gain more experience with vector art for icons
+- Dip my toes in Angular
 
-## Development server
+## Why I made it like this
+- Subtitle Saga
+  - The subtitle is an SVG to keep the text decorations (i.e. the halo and demon bits) correctly positioned relative to the text
+  - It's broken into two SVGs because responsiveness required wrapping [[SVG 1](https://github.com/Alex-Symonds/acmevil/blob/main/src/assets/images/subtitle-with-decorations-white-pt1.svg)] [[SVG 2](https://github.com/Alex-Symonds/acmevil/blob/main/src/assets/images/subtitle-with-decorations-white-pt2.svg)]
+  - The text is converted to paths because otherwise Safari starts getting "clever ideas" about the font
+- Used AI art for the images in the "Other Services" sections and for part of the hero image (the laptop's display)
+- Created my own vector icons for [death ray](https://github.com/Alex-Symonds/acmevil/blob/main/src/assets/images/deathray.svg), [computer virus](https://github.com/Alex-Symonds/acmevil/blob/main/src/assets/images/virus.svg) and [magical](https://github.com/Alex-Symonds/acmevil/blob/main/src/assets/images/magic.svg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Things I'd do differently with more time
+- Learn and implement better ways of handling content in Angular (I suspect real Angular devs would look at this and cry)
+- Make a second page, so the links have something to link to. The second page would contain a message chastising the user for expressing interest in supervillainy, with a customised message depending on which link you clicked
+- Go further still: design and build an entire fake website for this fake company. Product pages, a catalogue page, customer testimonials, etc. etc.
+- Go even further still: add a backend with a fake shop connected to a fake database
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
