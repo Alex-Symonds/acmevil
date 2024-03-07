@@ -1,0 +1,150 @@
+@use '../util' as u;
+
+
+$heroWidth: 960px;
+
+
+.hero{
+    --heightHeroImg: 638px;
+
+    background: var(--accent);
+    width: 100%;
+
+    color: white;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 1;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    max-width: 100%;
+}
+
+.decoration{
+    height: min-content;
+    max-height: 40vh;
+
+    img{
+        width: 100%;
+        position: relative;
+        top: 5px;
+    }
+}
+
+.textWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2rem;
+
+    width: 90%;
+    max-width: min(80ch, 100%);
+    font-weight: 300;
+
+    background: var(--accent-translucent);
+    padding: u.px-to-rem(28) u.px-to-rem(4);
+
+    h2{
+        margin: 0;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+.subtitle{
+    height: u.px-to-rem(38);
+}
+
+.buttonWrapper{
+    margin-top: 2rem;
+}
+
+
+// Switch to side-by-side display of hero text and image
+@media screen and (min-width: 943px){
+    .hero{
+        position: relative;
+        width: 100%;
+        min-height: var(--heightHeroImg);
+
+        display: block;
+    }
+
+    .decoration{
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        height: auto;
+
+        img{
+            width: auto;
+            position: static;
+            mask-image: linear-gradient(to left, black 80%, transparent 99%);
+        }
+    }
+
+    .content{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        left: u.px-to-rem(-20);
+        z-index: 2;
+
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .textWrapper{
+        padding: u.px-to-rem(42) u.px-to-rem(24);
+        background: var(--accent);
+
+        justify-content: center;
+    }
+
+    .subtitle{
+        height: u.px-to-rem(42);
+    }
+}
+
+
+// Constrain intro to subtitle width
+@media screen and (min-width: 1600px){
+// ------------------------------------------------------------------------
+// Goal: the intro paragraph should have the same width as the subtitle.
+//
+// Plan A: set "width: min-content" on the wrapper. The min-content of the 
+// SVG will have the widets min-content. Sorted.
+// Problem A1: The subtitle gets too small on narrow screens. 
+// Solution A1: Break subtitle into TWO SVGs, so they can "wrap".
+// Problem A2: min-content of the subtitle is now the width of the longer
+// piece, rather than both side-by-side.
+// Plan B: add a width to the wrapper with min-width set the the width 
+    .subtitle{
+        // If you change this, update the widths accordingly.
+        height: u.px-to-rem(54);
+    }
+
+    .subtitleWrapper{
+        // If you change this, update the height accordingly.
+        min-width: 586px;
+        width: 586px;
+        max-width: 100%;
+    }
+
+    .textWrapper{
+        width: min-content;
+    }
+// ------------------------------------------------------------------------
+}

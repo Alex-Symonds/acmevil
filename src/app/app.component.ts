@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { HeaderComponent } from './header/header.component';
+import { HeroComponent } from './hero/hero.component';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
   standalone: true,
   imports: [
     HeaderComponent,
+    HeroComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
