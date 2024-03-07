@@ -1,0 +1,64 @@
+@use '../util' as u;
+
+
+.mainCategoryCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: u.px-to-rem(250);
+    width: u.px-to-rem(270);
+    max-width: 100%;
+
+    min-height: 100%;
+
+    .topGroup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img{
+        width: u.px-to-rem(90);
+    }
+    
+    a{
+        --linkColour: var(--c_text-link);
+
+        align-self: start;
+        text-decoration: none;
+        padding: u.px-to-rem(2);
+
+        color: var(--linkColour);
+        border-bottom: 1px solid var(--linkColour);
+
+        &:hover{
+            --linkColour: var(--c_text-link-hover);
+        }
+        &:visited{
+            --linkColour: var(--c_text-link-visited);
+        }
+        &:visited:hover{
+            --linkColour: var(--c_text-link-visited-hover);
+        }
+
+        &:focus{
+            outline-color: var(--accent-focus);
+            outline-offset: u.px-to-rem(2);
+            outline-style: dotted;
+            border-radius: u.px-to-rem(4);
+        }
+    }
+
+    h3{
+        margin: u.px-to-rem(12) 0 u.px-to-rem(16);
+    }
+
+    p{
+        margin: 0 0 u.px-to-rem(16);
+    }
+
+}
+
+

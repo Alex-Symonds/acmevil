@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { HeaderComponent } from './header/header.component';
 import { HeroComponent } from './hero/hero.component';
+import { CategoriesStripComponent } from './categories-strip/categories-strip.component';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { HeroComponent } from './hero/hero.component';
   imports: [
     HeaderComponent,
     HeroComponent,
+    CategoriesStripComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
