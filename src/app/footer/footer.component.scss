@@ -7,11 +7,34 @@
     color: var(--c_main-text-on-dark);
 }
 
+
 .footerContent{
-    padding: 3rem var(--padding-main-x);
+    width: var(--width-max-supported);
+    max-width: 100%;
+
+    padding: 1.5rem var(--padding-main-x);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        'companyID'
+        'details'
+        'socialMedia'
+        'copyright'
+    ;
+
+    gap: 1rem;
+    align-items: start;
+
+    // Adjust top margins of areas alongside companyID (wider screens only)
+    --topMarginToLineUpWithCompanyName: 0;
 }
 
+
 .logoNameSubtitleContainer{
+    grid-area: companyID;
+
     display: grid;
     grid-template-columns: var(--iconWidth) max-content;
     grid-template-rows: auto auto;
@@ -42,13 +65,17 @@
     }
 }
 
+
 .footerInfoContainer{
-    margin-top: 2rem;
+    grid-area: details;
+
+    margin: var(--topMarginToLineUpWithCompanyName) 0 0 0;
 
     display: grid;
-    grid-template-columns: var(--iconWidth) 1fr;
-    gap: u.px-to-rem(2);
+    grid-template-columns: auto 1fr;
+    gap: u.px-to-rem(3);
 }
+
 
 .footerInfo{
     --textSize: #{ u.px-to-rem(12) };
@@ -73,9 +100,8 @@
 
 
 .socialMediaIconContainer{
-    grid-column: 2;
-
-    margin-top: 0.75rem;
+    grid-area: socialMedia;
+    margin: var(--topMarginToLineUpWithCompanyName) 0 0 0;
 
     display: flex;
     gap: 0.75rem;
@@ -85,11 +111,8 @@
     }
 }
 
-
-
-
 .copyrightContainer{
-    margin-top: 1rem; 
+    grid-area: copyright;
 }
 
 .copyright{
@@ -97,3 +120,22 @@
     color: var(--c_subtle-text-on-dark);
 }
 
+
+@media screen and (min-width: 666px){
+    .footerContent{
+        padding: 3rem var(--padding-main-x);
+
+        grid-template-columns: min-content auto 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            'companyID      socialMedia     details'
+            '.              .               details'
+            'copyright      copyright       copyright'
+        ;
+        gap: u.px-to-rem(6) 4rem;
+    
+        // Nudge down areas alongside the companyID so they line
+        // up with the text and not the logo
+        --topMarginToLineUpWithCompanyName: #{ u.px-to-rem(5) };
+    }
+}

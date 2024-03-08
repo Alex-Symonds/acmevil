@@ -4,13 +4,19 @@
 $heroWidth: 960px;
 
 
+.heroStrip{
+    --colourHeroBG: var(--accent);
+    --textOnHeroBG: var(--c_main-text-on-dark);
+
+    background: var(--colourHeroBG);
+}
+
 .hero{
     --heightHeroImg: 638px;
 
-    background: var(--accent);
-    width: 100%;
+    width: var(--width-max-supported);
+    max-width: 100%;
 
-    color: white;
     overflow: hidden;
 
     display: flex;
@@ -20,13 +26,6 @@ $heroWidth: 960px;
     z-index: 1;
 }
 
-.content{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-
-    max-width: 100%;
-}
 
 .decoration{
     height: min-content;
@@ -39,19 +38,32 @@ $heroWidth: 960px;
     }
 }
 
-.textWrapper{
+
+.contentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    height: 100%;
+    max-width: 100%;
+}
+
+
+.content{
+    width: 90%;
+    max-width: min(80ch, 100%);
+
+    padding: u.px-to-rem(28) u.px-to-rem(4);
+
+    font-weight: 300;
+
+    color: var(--textOnHeroBG);
+
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
     gap: 2rem;
-
-    width: 90%;
-    max-width: min(80ch, 100%);
-    font-weight: 300;
-
-    background: var(--accent-translucent);
-    padding: u.px-to-rem(28) u.px-to-rem(4);
 
     h2{
         margin: 0;
@@ -74,9 +86,7 @@ $heroWidth: 960px;
 @media screen and (min-width: 943px){
     .hero{
         position: relative;
-        width: 100%;
         min-height: var(--heightHeroImg);
-
         display: block;
     }
 
@@ -94,19 +104,18 @@ $heroWidth: 960px;
         }
     }
 
-    .content{
+    .contentContainer{
         position: absolute;
         top: 0;
         bottom: 0;
+        left: 0;
         right: 50%;
-        left: u.px-to-rem(-20);
         z-index: 2;
 
-        align-items: stretch;
         padding: 0;
     }
 
-    .textWrapper{
+    .content{
         padding: u.px-to-rem(42) u.px-to-rem(24);
         background: var(--accent);
 
@@ -131,6 +140,7 @@ $heroWidth: 960px;
 // Problem A2: min-content of the subtitle is now the width of the longer
 // piece, rather than both side-by-side.
 // Plan B: add a width to the wrapper with min-width set the the width 
+
     .subtitle{
         // If you change this, update the widths accordingly.
         height: u.px-to-rem(54);
@@ -138,12 +148,12 @@ $heroWidth: 960px;
 
     .subtitleWrapper{
         // If you change this, update the height accordingly.
-        min-width: 586px;
-        width: 586px;
+        min-width: 588px;
+        width: 588px;
         max-width: 100%;
     }
 
-    .textWrapper{
+    .content{
         width: min-content;
     }
 // ------------------------------------------------------------------------

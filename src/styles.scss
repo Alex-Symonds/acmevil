@@ -98,6 +98,7 @@ $c_tone-950: '#0A0A0A';
     --c_section-bg-secondary: #{ $c_tone-900 };
 
     --width-content: #{ u.px-to-rem(1500) };
+    --width-max-supported: 1920px;
     
     --padding-main-x: 1rem;
     @media screen and (min-width: 800px){
@@ -130,6 +131,8 @@ body{
     width: var(--width-content);
     max-width: 100%;
 }
+
+
 
 
 // || CompanyName

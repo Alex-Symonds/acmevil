@@ -1,19 +1,26 @@
 @use "../util" as u;
 
-.header{
+
+.headerStickyStrip{
     position: sticky;
     top: 0;
     left: 0;
     z-index: 2;
 
+    background: white;
+    box-shadow: 0 3px 15px 4px rgba(black, 0.1);
+}
+
+
+.header{
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: u.px-to-rem(12) u.px-to-rem(12) u.px-to-rem(12);
 
-    background: white;
-    box-shadow: 0 3px 15px 4px rgba(black, 0.1);
+    width: var(--width-max-supported);
+    max-width: 100%;
 }
 
 
