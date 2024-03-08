@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   template: `
     <div class="strip footerStrip">
-      <section class="contentSection footerContent">
+      <section class="footerContent">
         <div class="logoNameSubtitleContainer">
           <img src="./assets/images/logo-white.svg" width="55px" alt="" />
           <span class="companyName">acmevil</span>
@@ -31,16 +31,16 @@ import { Component } from '@angular/core';
             <span class="value">666</span>
           </div>
 
-
-          <div class="socialMediaIconContainer">
-            <a *ngFor = "let social of socials"
-              href="{{ social.url }}"
-            >
-              <img src="{{ social.icon }}" alt="{{ social.altText }}" width="24px" />
-            </a>
-          </div>
-
         </div>
+
+        <div class="socialMediaIconContainer">
+          <a *ngFor = "let social of socials"
+            href="{{ social.url }}"
+          >
+            <img src="{{ social.icon }}" alt="{{ social.altText }}" width="24px" />
+          </a>
+        </div>
+
       
         <div class="copyrightContainer">
           <span class="copyright">&#169; 2024 Acmevil Ltd. All rights reserved and enforced via an impressive array of sub-orbital lasers.</span>

@@ -7,10 +7,10 @@ import { ButtonComponent } from '../button/button.component';
   standalone: true,
   imports: [ButtonComponent],
   template: `
+  <div class="strip heroStrip">
     <section class="hero">
-
-      <div class="content">
-        <div class="textWrapper">
+      <div class="contentContainer">
+        <div class="content">
           <h2>
             <div class="subtitleWrapper">
               <img class="subtitle"
@@ -51,6 +51,7 @@ import { ButtonComponent } from '../button/button.component';
         />
       </picture>
     </section>
+    </div>
   `,
   styleUrl: './hero.component.scss'
 })

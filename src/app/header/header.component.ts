@@ -7,12 +7,15 @@ import { NavbarComponent } from '../navbar/navbar.component';
   standalone: true,
   imports: [NavbarComponent],
   template: `
-  <section class="header">
-    <h1>
-      <img src="./assets/images/logo.svg" alt="" />
-      <span class="companyName">acmevil</span>
-    </h1>
-  <app-navbar></app-navbar>
+  <div class="strip headerStickyStrip">
+    <section class="header">
+      <h1>
+        <img src="./assets/images/logo.svg" alt="" />
+        <span class="companyName">acmevil</span>
+      </h1>
+      <app-navbar></app-navbar>
+    </section>
+  </div>
   `,
   styleUrl: './header.component.scss'
 })
