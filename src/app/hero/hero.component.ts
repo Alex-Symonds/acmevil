@@ -65,7 +65,7 @@ export class HeroComponent {
   }
 
   onClick(event : MouseEvent){
-    alert("Sorry but this page is just a demo for a fictitious company, so quotes are unavailable.");
+    alert("Sorry but this page is just a demo for a fictional company, so quotes are unavailable.");
   }
 
 }
